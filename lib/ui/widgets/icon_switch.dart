@@ -3,7 +3,7 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 
 class AnimateIcons extends StatefulWidget {
-  const AnimateIcons({
+  const AnimateIcons({Key? key, 
     /// The IconData that will be visible before animation Starts
     required this.startIcon,
 
@@ -44,7 +44,7 @@ class AnimateIcons extends StatefulWidget {
 
     /// This is the tooltip that will be used for the [endIcon]
     this.endTooltip,
-  });
+  }) : super(key: key);
   final IconData startIcon;
   final bool Function() onStartIconPress, onEndIconPress;
   final Duration? duration;

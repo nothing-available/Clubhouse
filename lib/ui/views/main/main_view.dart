@@ -89,7 +89,7 @@ class MainView extends HookWidget {
                     avatarImg: const AssetImage('assets/images/s.jpg'),
                     topPadding: 50,
                     body: model.child,
-                    title: 'Shashi Kumar',
+                    title: 'Sumit Kumar',
                     items: model.collapsibleItem),
                 mobile: SizedBox(
                   width: uiHelpers.width,
