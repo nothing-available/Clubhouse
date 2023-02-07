@@ -101,13 +101,13 @@ class TrailingInfo extends StatelessWidget {
 }
 
 class CircularContainer extends StatelessWidget {
-  const CircularContainer({
+  const CircularContainer({Key? key, 
     this.child,
     this.width = 40,
     this.height = 40,
     this.color,
     this.borderRadius,
-  });
+  }) : super(key: key);
 
   final Color? color;
   final Widget? child;

@@ -28,11 +28,11 @@ class MainViewModel extends BaseViewModel {
   ];
 
   final List<Widget> views = <Widget>[
-    HomeView(),
-    AboutView(),
+    const HomeView(),
+    const AboutView(),
     const ProjectView(),
-    ExperienceView(),
-    ContactView(),
+    const ExperienceView(),
+    const ContactView(),
   ];
 
   late Widget child;

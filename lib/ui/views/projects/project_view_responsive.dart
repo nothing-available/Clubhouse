@@ -115,10 +115,9 @@ class ProjectResponsiveView extends StatelessWidget {
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
-                      Container(
-                          child: ResponsiveGridRow(
+                      ResponsiveGridRow(
                         children: model!.getProjects(),
-                      )),
+                      ),
                     ],
                   ),
                 ),

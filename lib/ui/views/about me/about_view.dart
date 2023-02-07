@@ -5,6 +5,8 @@ import 'about_view_all_size.dart';
 import 'about_view_model.dart';
 
 class AboutView extends StatelessWidget {
+  const AboutView({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return ScreenBuilder<AboutViewModel>(

@@ -56,7 +56,6 @@ class FlickerTextAnimation extends StatefulWidget {
   final WrapAlignment wrapAlignment;
 
   @override
-  // ignore: library_private_types_in_public_api
   _FlickerTextAnimationState createState() => _FlickerTextAnimationState();
 }
 

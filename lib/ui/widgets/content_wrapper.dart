@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import '../../core/utils/ScreenUiHelper.dart';
 
 class ContentWrapper extends StatelessWidget {
-  const ContentWrapper({
+  const ContentWrapper({Key? key, 
     this.width,
     this.height,
     this.color ,
     this.gradient,
     this.child,
-  });
+  }) : super(key: key);
 
   final double? width;
   final double? height;

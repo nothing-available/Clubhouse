@@ -6,7 +6,7 @@ import '../../core/utils/adaptive.dart';
 import 'custom shapes/tree_painter.dart';
 
 class ExperienceTree extends StatelessWidget {
-  const ExperienceTree({
+  const ExperienceTree({Key? key, 
     required this.experienceData,
     this.head,
     this.widthOfTree,
@@ -18,7 +18,7 @@ class ExperienceTree extends StatelessWidget {
     this.headBackgroundColor,
     this.tailBackgroundColor,
     this.scrollController,
-  });
+  }) : super(key: key);
 
   final Widget? head;
   final double? widthOfTree;
@@ -236,47 +236,45 @@ class LocationDateLeaf extends StatelessWidget {
   Widget build(BuildContext context) {
     final ScreenUiHelper uiHelper = ScreenUiHelper.fromContext(context);
     final ThemeData theme = Theme.of(context);
-    return Container(
-      child: Column(
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              Text(
-                duration!,
-                style: durationTextStyle ??
-                    theme.textTheme.bodyText2!
-                        .copyWith(color: uiHelper.textPrimaryColor),
-              ),
-              const SizedBox(width: 4),
-              Icon(
-                Icons.access_time,
-                color: uiHelper.primaryColor,
-                size: 18,
-              ),
-            ],
-          ),
-          const SizedBox(height: 8),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              Text(
-                location!,
-                style: locationTextStyle ??
-                    theme.textTheme.bodyText2!
-                        .copyWith(color: uiHelper.textSecondaryColor),
-              ),
-              const SizedBox(width: 4),
-            ],
-          )
-        ],
-      ),
+    return Column(
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Text(
+              duration!,
+              style: durationTextStyle ??
+                  theme.textTheme.bodyText2!
+                      .copyWith(color: uiHelper.textPrimaryColor),
+            ),
+            const SizedBox(width: 4),
+            Icon(
+              Icons.access_time,
+              color: uiHelper.primaryColor,
+              size: 18,
+            ),
+          ],
+        ),
+        const SizedBox(height: 8),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Text(
+              location!,
+              style: locationTextStyle ??
+                  theme.textTheme.bodyText2!
+                      .copyWith(color: uiHelper.textSecondaryColor),
+            ),
+            const SizedBox(width: 4),
+          ],
+        )
+      ],
     );
   }
 }
 
 class RoleLeaf extends StatelessWidget {
-  const RoleLeaf({
+  const RoleLeaf({Key? key, 
     required this.company,
     required this.position,
     required this.roles,
@@ -284,7 +282,7 @@ class RoleLeaf extends StatelessWidget {
     this.positionTextStyle,
     this.roleTextStyle,
     this.onTap,
-  });
+  }) : super(key: key);
 
   final String? company;
   final String? position;
@@ -298,36 +296,34 @@ class RoleLeaf extends StatelessWidget {
   Widget build(BuildContext context) {
     final ScreenUiHelper uiHelper = ScreenUiHelper.fromContext(context);
     final ThemeData theme = Theme.of(context);
-    return Container(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          InkWell(
-            onTap: onTap,
-            child: Text(
-              company!,
-              style: companyTextStyle ??
-                  theme.textTheme.subtitle1!
-                      .copyWith(fontSize: 18, color: uiHelper.primaryColor),
-            ),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        InkWell(
+          onTap: onTap,
+          child: Text(
+            company!,
+            style: companyTextStyle ??
+                theme.textTheme.subtitle1!
+                    .copyWith(fontSize: 18, color: uiHelper.primaryColor),
           ),
-          Text(
-            position!,
-            style: positionTextStyle ??
-                theme.textTheme.subtitle2!.copyWith(
-                    fontStyle: FontStyle.italic,
-                    color: uiHelper.textPrimaryColor),
+        ),
+        Text(
+          position!,
+          style: positionTextStyle ??
+              theme.textTheme.subtitle2!.copyWith(
+                  fontStyle: FontStyle.italic,
+                  color: uiHelper.textPrimaryColor),
+        ),
+        const SizedBox(height: 8),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: _buildRoles(
+            roles: roles!,
+            context: context,
           ),
-          const SizedBox(height: 8),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: _buildRoles(
-              roles: roles!,
-              context: context,
-            ),
-          ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 
@@ -355,12 +351,12 @@ class RoleLeaf extends StatelessWidget {
 }
 
 class Role extends StatelessWidget {
-  const Role({
+  const Role({Key? key, 
     required this.role,
     this.roleTextStyle,
     this.icon = Icons.arrow_right,
     this.iconSize = 18,
-  });
+  }) : super(key: key);
 
   final String role;
   final TextStyle? roleTextStyle;

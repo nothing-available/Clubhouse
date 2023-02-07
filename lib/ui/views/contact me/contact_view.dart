@@ -8,6 +8,8 @@ import 'contact_mobile_view.dart';
 import 'contact_view_model.dart';
 
 class ContactView extends StatelessWidget {
+  const ContactView({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return ScreenBuilder<ContactViewModel>(

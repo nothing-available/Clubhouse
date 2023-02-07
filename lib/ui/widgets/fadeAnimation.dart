@@ -9,10 +9,10 @@ class FadeAnimation extends StatelessWidget {
   final double xDistance;
   final double yDistance;
   const FadeAnimation(
-      {required this.delay,
+      {Key? key, required this.delay,
       required this.child,
       this.xDistance = 30,
-      this.yDistance = 0.0});
+      this.yDistance = 0.0}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

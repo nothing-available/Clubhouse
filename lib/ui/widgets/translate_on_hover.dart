@@ -5,7 +5,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 class TranslateOnHover extends HookWidget {
   final Widget? child;
 
-  const TranslateOnHover({this.child});
+  const TranslateOnHover({Key? key, this.child}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     final Matrix4 nonHoverTransform = Matrix4.identity();

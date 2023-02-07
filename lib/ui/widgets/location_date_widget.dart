@@ -21,46 +21,44 @@ class LocationDateWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final ThemeData theme = Theme.of(context);
-    return Container(
-      child: Column(
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              Text(
-                duration,
-                style: durationTextStyle ??
-                    theme.textTheme.bodyText2!.copyWith(color: Colors.black),
-              ),
-              const SizedBox(height: 5),
-              const Icon(
-                Icons.access_time,
-                color: Color(0xFF000000),
-                size: 18,
-              ),
-            ],
-          ),
-          const SizedBox(height: 10),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              Text(
-                location,
-                style: locationTextStyle ??
-                    theme.textTheme.bodyText2!.copyWith(color: Colors.black),
-              ),
-              const SizedBox(
-                height: 5,
-              ),
-              const Icon(
-                Icons.location_on,
-                color: Color(0xFF000000),
-                size: 18,
-              ),
-            ],
-          )
-        ],
-      ),
+    return Column(
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Text(
+              duration,
+              style: durationTextStyle ??
+                  theme.textTheme.bodyText2!.copyWith(color: Colors.black),
+            ),
+            const SizedBox(height: 5),
+            const Icon(
+              Icons.access_time,
+              color: Color(0xFF000000),
+              size: 18,
+            ),
+          ],
+        ),
+        const SizedBox(height: 10),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Text(
+              location,
+              style: locationTextStyle ??
+                  theme.textTheme.bodyText2!.copyWith(color: Colors.black),
+            ),
+            const SizedBox(
+              height: 5,
+            ),
+            const Icon(
+              Icons.location_on,
+              color: Color(0xFF000000),
+              size: 18,
+            ),
+          ],
+        )
+      ],
     );
   }
 }

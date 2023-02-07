@@ -16,23 +16,21 @@ class DividerWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          CircleAvatar(
-            backgroundColor: dividerColor,
-            radius: radius,
+    return Row(
+      mainAxisSize: MainAxisSize.min,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        CircleAvatar(
+          backgroundColor: dividerColor,
+          radius: radius,
+        ),
+        Expanded(
+          child: Divider(
+            color: dividerColor,
+            thickness: thickness,
           ),
-          Expanded(
-            child: Divider(
-              color: dividerColor,
-              thickness: thickness,
-            ),
-          )
-        ],
-      ),
+        )
+      ],
     );
   }
 }

@@ -7,6 +7,8 @@ import 'experience_view_mobile.dart';
 import 'experience_view_model.dart';
 
 class ExperienceView extends StatelessWidget {
+  const ExperienceView({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return ScreenBuilder<ExperienceViewModel>(

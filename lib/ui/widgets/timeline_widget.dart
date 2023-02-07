@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Timeline extends StatelessWidget {
-  const Timeline({
+  const Timeline({Key? key, 
     required this.children,
     this.indicators,
     this.isLeftAligned = true,
@@ -24,7 +24,7 @@ class Timeline extends StatelessWidget {
   })  : itemCount = children.length,
         assert(itemGap >= 0),
         assert(lineGap >= 0),
-        assert(indicators == null || children.length == indicators.length);
+        assert(indicators == null || children.length == indicators.length), super(key: key);
 
   final List<Widget> children;
   final double itemGap;
